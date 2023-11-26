@@ -1,0 +1,150 @@
+/* .cbit-logo {
+    width: 200px;
+    height: auto;
+}
+
+.navbar {
+    background-color: #212529;
+    overflow: auto;
+    padding: 10px 0px;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-brand{
+    flex: 1;
+}
+
+.nav-brand a {
+    color: #fff;
+    text-decoration: none;
+    font-size: small;
+    padding: 10px;
+}
+
+.nav-menu {
+    display: flex;
+    flex: 1;
+    list-style-type: none;
+    text-align: right;
+    margin: 0;
+    padding: 0px;
+}
+
+.nav-menu li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.nav-item {
+    margin: 0 10px;
+}
+
+.nav-item a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-item a:hover {
+    color: #ddd;
+}
+
+@media (max-width: 768px) {
+    .nav-container {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .nav-menu {
+      text-align: left;
+      margin-top: 10px;
+    }
+  
+    .nav-menu li {
+      display: block;
+      margin: 5px;
+    }
+  } */
+
+  .cbit-logo {
+    width: 200px;
+    height: auto;
+  }
+  
+  .navbar {
+    background-color: #212529;
+    justify-content: space-between;
+    overflow: auto;
+    padding: 10px 0px;
+    color: #fff;
+  }
+  
+  .nav-container {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .nav-brand {
+    flex: 1;
+  }
+  
+  .nav-brand a {
+    color: #fff;
+    text-decoration: none;
+    font-size: small;
+    padding: 10px;
+  }
+  
+  .nav-menu {
+    display: flex;
+    list-style-type: none;
+    text-align: right;
+    margin: 0;
+    padding: 0px;
+  }
+  
+  .nav-menu li {
+    display: inline-block;
+    margin-left: 20px;
+  }
+  
+  .nav-item {
+    margin: 0 10px;
+  }
+  
+  .nav-item a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .nav-item a:hover {
+    color: #ddd;
+  }
+  
+  @media (max-width: 768px) {
+    .nav-container {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .nav-menu {
+      text-align: left;
+      margin-top: 10px;
+    }
+  
+    .nav-menu li {
+      display: block;
+      margin: 5px;
+    }
+  }
+  
