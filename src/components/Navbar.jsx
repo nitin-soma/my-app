@@ -5,9 +5,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 const Navbar = () => {
   return (
     <>
-      <header className="navbar navbar-expand-lg bd-navbar sticky-top">
-        <nav className="navbar">
-          <div className="nav-container d-flex justify-content-between">
+      <header className="navbar-expand-lg bd-navbar sticky-top">
+        <div className="navbar">
+          <div className="nav-container">
             <div className="nav-brand">
               <a href="/">
                 <img
@@ -20,18 +20,29 @@ const Navbar = () => {
             <div>
               <ul className="nav-menu d-flex">
                 <li className="nav-item">
-                  <a href="/">Announcements</a>
+                  <a href="/announcements">Announcements</a>
                 </li>
                 <li className="nav-item">
-                  <a href="/signup">Sign up/Log in</a>
+                  <a href="/signup">Sign up</a>
+                </li>
+                <li className="nav-item">
+                  <a href="/login">Log in</a>
                 </li>
                 <li className="nav-item">
                   <a href="/">Profile</a>
                 </li>
               </ul>
             </div>
+            {/* <div className="nav-grid">
+              <button className="btn button-1" type="button">
+                <span>Log in</span>
+              </button>
+              <button className="btn button-2" type="button">
+                <span>Sign up</span>
+              </button>
+            </div> */}
           </div>
-        </nav>
+        </div>
       </header>
     </>
   );

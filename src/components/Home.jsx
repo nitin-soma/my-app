@@ -6,8 +6,11 @@ const Home = () => {
   return (
     <>
       <div className="phrase">
-        <h1 className="custom-heading">Your Future Starts Here</h1>
-        <h3 className="caption">Unlock Your Career Potential!</h3>
+        <strong>
+          Your Future Starts Here
+          <br />
+          Unlock Your Career Potential!
+        </strong>
       </div>
     </>
   );
