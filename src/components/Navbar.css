@@ -1,167 +1,93 @@
-/* .cbit-logo {
-    width: 200px;
-    height: auto;
+.cbit-logo {
+  width: 200px;
+  height: auto;
 }
 
 .navbar {
-    background-color: #212529;
-    overflow: auto;
-    padding: 10px 0px;
+  background-color: #C197D2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  min-height: 72px;
+  overflow: auto;
+  color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.nav-brand{
-    flex: 1;
+.nav-brand {
+  display: flex;
 }
 
 .nav-brand a {
-    color: #fff;
-    text-decoration: none;
-    font-size: small;
-    padding: 10px;
+  color: #fff;
+  padding: 20px;
 }
 
 .nav-menu {
-    display: flex;
-    flex: 1;
-    list-style-type: none;
-    text-align: right;
-    margin: 0;
-    padding: 0px;
+  display: flex;
+  list-style-type: none;
+  margin: 2px;
+  padding: 0px;
 }
 
 .nav-menu li {
-    display: inline-block;
-    margin-left: 20px;
+  display: inline-block;
+  margin-left: 20px;
 }
 
 .nav-item {
-    margin: 0 10px;
+  margin: 0 10px;
 }
 
 .nav-item a {
-    color: #fff;
-    text-decoration: none;
+  color: #fff;
+  text-decoration: none;
+  font-size: 22px;
 }
 
 .nav-item a:hover {
-    color: #ddd;
+  color: #211522;
+}
+
+.nav-grid{
+  display: grid;
+  grid-column-gap: 16px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.button-1{
+  background-color: var(--K12xjw);
+  color: var(--_T63JA);
+}
+
+.button-2{
+  background-color: var(--_mHLrA);
+  color: var(--4Yobmg);
+  outline-offset: 4px;
 }
 
 @media (max-width: 768px) {
-    .nav-container {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  
-    .nav-menu {
-      text-align: left;
-      margin-top: 10px;
-    }
-  
-    .nav-menu li {
-      display: block;
-      margin: 5px;
-    }
-  } */
-
-  .cbit-logo {
-    width: 200px;
-    height: auto;
-  }
-  
-  .navbar {
-    background-color: #C197D2;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-sizing: border-box;
-    min-height: 72px;
-    overflow: auto;
-    color: #fff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
   .nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
+    flex-direction: column;
+    align-items: flex-start;
   }
-  
-  .nav-brand {
-    display: flex;
-  }
-  
-  .nav-brand a {
-    color: #fff;
-    padding: 20px;
-  }
-  
+
   .nav-menu {
-    display: flex;
-    list-style-type: none;
-    margin: 2px;
-    padding: 0px;
+    text-align: left;
+    margin-top: 10px;
   }
-  
+
   .nav-menu li {
-    display: inline-block;
-    margin-left: 20px;
+    display: block;
+    margin: 5px;
   }
-  
-  .nav-item {
-    margin: 0 10px;
-  }
-  
-  .nav-item a {
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  .nav-item a:hover {
-    color: #211522;
-  }
-
-  .nav-grid{
-    display: grid;
-    grid-column-gap: 16px;
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .button-1{
-    background-color: var(--K12xjw);
-    color: var(--_T63JA);
-  }
-
-  .button-2{
-    background-color: var(--_mHLrA);
-    color: var(--4Yobmg);
-    outline-offset: 4px;
-  }
-
-  @media (max-width: 768px) {
-    .nav-container {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  
-    .nav-menu {
-      text-align: left;
-      margin-top: 10px;
-    }
-  
-    .nav-menu li {
-      display: block;
-      margin: 5px;
-    }
-  }
-  
+}

@@ -1,5 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Navbar from "./Navbar";
+import "./Navbar.css";
+import Footer from "./Footer";
+import "./Footer.css";
 import "./SignUp.css";
 import axios from "../api/axios";
 
@@ -87,7 +91,6 @@ const AdminSignUp = () => {
       } else {
         setErrMsg("Registration Failed");
       }
-      // errRef.current.focus();
     }
   };
 
@@ -95,133 +98,137 @@ const AdminSignUp = () => {
     <>
       {success ? (
         <section>
-          <p>Signed up ✅</p>
+          <strong>Signed up ✅</strong>
           <a href="/login" role="button">
             Sign in
           </a>
         </section>
       ) : (
-        <section>
-          <p
-            ref={errRef}
-            className={errMsg ? "errmsg" : "offscreen"}
-            aria-live="assertive"
-          >
-            {errMsg}
-          </p>
-          <strong className="student-strong">
-            Sign up as a <span>student</span>
-          </strong>
-          <div className="container">
-            <form className="formfield" onSubmit={handleSubmit}>
-              <div className="mb-3 row">
-                <label htmlFor="username" className="col-sm-5 col-form-label">
-                  Email:
-                </label>
-              </div>
-              <div className="col-sm-10">
-                <input
-                  type="email"
-                  className="form-control"
-                  id="username"
-                  ref={userRef}
-                  autoComplete="off"
-                  onChange={(e) => setUser(e.target.value)}
-                  value={user}
-                  required
-                  aria-invalid={validName ? "false" : "true"}
-                  aria-describedby="uidnote"
-                  onFocus={() => setUserFocus(true)}
-                  onBlur={() => setUserFocus(false)}
-                />
+        <>
+          <Navbar />
+          <div>
+            <p
+              ref={errRef}
+              className={errMsg ? "errmsg" : "offscreen"}
+              aria-live="assertive"
+            >
+              {errMsg}
+            </p>
+            <strong className="student-strong">
+              Sign up as a <span>admin</span>
+            </strong>
+            <div className="container">
+              <form className="formfield" onSubmit={handleSubmit}>
+                <div className="mb-3 row">
+                  <label htmlFor="username" className="col-sm-5 col-form-label">
+                    Email:
+                  </label>
+                </div>
+                <div className="col-sm-10">
+                  <input
+                    type="email"
+                    className="form-control"
+                    id="username"
+                    ref={userRef}
+                    autoComplete="off"
+                    onChange={(e) => setUser(e.target.value)}
+                    value={user}
+                    required
+                    aria-invalid={validName ? "false" : "true"}
+                    aria-describedby="uidnote"
+                    onFocus={() => setUserFocus(true)}
+                    onBlur={() => setUserFocus(false)}
+                  />
 
-                <p
-                  id="uidnote"
-                  className={
-                    userFocus && user && !validName
-                      ? "instructions"
-                      : "offscreen"
-                  }
-                ></p>
-              </div>
+                  <p
+                    id="uidnote"
+                    className={
+                      userFocus && user && !validName
+                        ? "instructions"
+                        : "offscreen"
+                    }
+                  ></p>
+                </div>
 
-              <div className="mb-3 row">
-                <label htmlFor="password" className="col-sm-5 col-form-label">
-                  Password:
-                </label>
-              </div>
-              <div className="col-sm-10">
-                <input
-                  type="password"
-                  className="form-control"
-                  id="password"
-                  onChange={(e) => setPwd(e.target.value)}
-                  value={pwd}
-                  required
-                  aria-invalid={validPwd ? "false" : "true"}
-                  aria-describedby="pwdnote"
-                  onFocus={() => setPwdFocus(true)}
-                  onBlur={() => setPwdFocus(false)}
-                />
-                <p
-                  id="pwdnote"
-                  className={
-                    pwdFocus && !validPwd ? "instructions" : "offscreen"
-                  }
-                >
-                  8 to 24 characters.
-                  <br />
-                  Must include uppercase and lowercase letters, a number and a
-                  special character.
-                  <br />
-                  Allowed special characters:{" "}
-                  <span aria-label="exclamation mark">!</span>{" "}
-                  <span aria-label="at symbol">@</span>{" "}
-                  <span aria-label="hashtag">#</span>{" "}
-                  <span aria-label="dollar sign">$</span>{" "}
-                  <span aria-label="percent">%</span>{" "}
-                  <span aria-label="underscore">_</span>
-                </p>
-              </div>
+                <div className="mb-3 row">
+                  <label htmlFor="password" className="col-sm-5 col-form-label">
+                    Password:
+                  </label>
+                </div>
+                <div className="col-sm-10">
+                  <input
+                    type="password"
+                    className="form-control"
+                    id="password"
+                    onChange={(e) => setPwd(e.target.value)}
+                    value={pwd}
+                    required
+                    aria-invalid={validPwd ? "false" : "true"}
+                    aria-describedby="pwdnote"
+                    onFocus={() => setPwdFocus(true)}
+                    onBlur={() => setPwdFocus(false)}
+                  />
+                  <p
+                    id="pwdnote"
+                    className={
+                      pwdFocus && !validPwd ? "instructions" : "offscreen"
+                    }
+                  >
+                    8 to 24 characters.
+                    <br />
+                    Must include uppercase and lowercase letters, a number and a
+                    special character.
+                    <br />
+                    Allowed special characters:{" "}
+                    <span aria-label="exclamation mark">!</span>{" "}
+                    <span aria-label="at symbol">@</span>{" "}
+                    <span aria-label="hashtag">#</span>{" "}
+                    <span aria-label="dollar sign">$</span>{" "}
+                    <span aria-label="percent">%</span>{" "}
+                    <span aria-label="underscore">_</span>
+                  </p>
+                </div>
 
-              <div className="mb-3 row">
-                <label
-                  htmlFor="confirm_pwd"
-                  className="col-sm-5 col-form-label"
-                >
-                  Confirm Password:
-                </label>
-              </div>
+                <div className="mb-3 row">
+                  <label
+                    htmlFor="confirm_pwd"
+                    className="col-sm-5 col-form-label"
+                  >
+                    Confirm Password:
+                  </label>
+                </div>
 
-              <div className="col-sm-10">
-                <input
-                  type="password"
-                  id="confirm_pwd"
-                  className="form-control"
-                  onChange={(e) => setMatchPwd(e.target.value)}
-                  value={matchPwd}
-                  required
-                  aria-invalid={validMatch ? "false" : "true"}
-                  aria-describedby="confirmnote"
-                  onFocus={() => setMatchFocus(true)}
-                  onBlur={() => setMatchFocus(false)}
-                />
-                <p
-                  id="confirmnote"
-                  className={
-                    matchFocus && !validMatch ? "instructions" : "offscreen"
-                  }
-                >
-                  Must match the first password input field.
-                </p>
-              </div>
+                <div className="col-sm-10">
+                  <input
+                    type="password"
+                    id="confirm_pwd"
+                    className="form-control"
+                    onChange={(e) => setMatchPwd(e.target.value)}
+                    value={matchPwd}
+                    required
+                    aria-invalid={validMatch ? "false" : "true"}
+                    aria-describedby="confirmnote"
+                    onFocus={() => setMatchFocus(true)}
+                    onBlur={() => setMatchFocus(false)}
+                  />
+                  <p
+                    id="confirmnote"
+                    className={
+                      matchFocus && !validMatch ? "instructions" : "offscreen"
+                    }
+                  >
+                    Must match the first password input field.
+                  </p>
+                </div>
 
-              <button type="submit" id="check">
-                Sign up
-              </button>
-            </form>
+                <button type="submit" id="check">
+                  Sign up
+                </button>
+              </form>
+            </div>
           </div>
-        </section>
+          <Footer />
+        </>
       )}
     </>
   );

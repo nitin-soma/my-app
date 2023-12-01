@@ -1,36 +1,69 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background: url('../../public/photo-1482440308425-276ad0f28b19.jpg') no-repeat bottom fixed;
+    background-size: cover;
     margin: 0;
     padding: 0;
-  }
+}
 
-  .announcement {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin: 10px;
-    padding: 15px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
+.message-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 150px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 40%;
+}
 
-  .avatar {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin-right: 10px;
-  }
+h2{
+    text-align: center;
+}
 
-  .username {
-    font-weight: bold;
-    color: #333;
-  }
+.message-container:hover {
+    cursor: pointer;
+    background-color: grey;
+}
 
-  .timestamp {
-    color: #888;
+.message-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 5px;
+}
+
+.message-info h2 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.message-info time {
+    margin: 0;
+    color: #6c757d;
     font-size: 12px;
-  }
+}
 
-  .content {
-    margin-top: 10px;
-  }
+nav {
+    padding: 40px;
+    text-align: right;
+}
+
+nav a {
+    text-decoration: none;
+    color: #f5ebf7;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+
+.full-message {
+    display: none;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 5px;
+    font-size: 14px;
+}

@@ -31,8 +31,8 @@ const login = async (req, res) => {
       return res.status(401).json({ message: "Invalid email or password" });
     }
 
-    console.log(JWT_SECRET);
-
+    const rolesArray = Object.values(foundUser.role).filter(String);
+    const roles = rolesArray.join("");
     const token = jwt.sign(
       { id: foundUser._id, role: foundUser.role },
       JWT_SECRET,
@@ -48,7 +48,7 @@ const login = async (req, res) => {
       sameSite: "None",
       maxAge: 24 * 60 * 60 * 1000,
     });
-    res.json({ token });
+    res.json({ roles, token });
   } catch (error) {
     console.error(error);
     res.status(500).json({ message: "Internal Server Error" });

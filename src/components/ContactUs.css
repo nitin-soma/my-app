@@ -1,0 +1,78 @@
+body, h1, h2, h3, p, img {
+    margin: 0;
+    padding: 0;
+}
+
+.para{
+    color: black;
+    font-weight: normal;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: url('../../public/pexels-jayant-kulkarni-910213.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+#anchors {
+    padding: 20px;
+    text-align: right;
+}
+
+nav a {
+    text-decoration: none;
+    color: #452d5b;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+#writeup {
+    margin: 20px;
+    padding: 50px;
+    color: black;
+    border-radius: 10px;
+    text-align: left;
+    background: url('../../public/pexels-pixabay-257092.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+main {
+    padding: 20px;
+    display: flex;
+    justify-content: space-around; /* Added space between sections */
+}
+
+section {
+    color: #452d5b;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px;
+    flex: 1;
+    box-sizing: border-box;
+}
+
+section a {
+    text-decoration: none;
+    color: #452d5b;
+    font-weight: bold;
+    display: block; /* Ensures the entire area is clickable */
+    margin-top: 10px;
+}
+
+
+footer {
+    text-align: right;
+    color: #452d5b;
+    padding: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column; /* Stack sections on smaller screens */
+    }
+
+    section {
+        margin: 20px 0; /* Adjusted margin for better spacing */
+    }
+}

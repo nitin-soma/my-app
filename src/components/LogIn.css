@@ -9,8 +9,13 @@
     border-radius: 10px;
 }
 
+
 .link-to-signup{
-    margin-bottom: 23.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -10%;
+    margin-bottom: 22.5%;
 }
 
 strong{
@@ -18,6 +23,13 @@ strong{
     font-size: 48px;
     font-family: 'Canva Sans','Noto Sans Variable','Noto Sans','-apple-system','BlinkMacSystemFont','Segoe UI',Helvetica,Arial,sans-serif;
     font-variation-settings: "opsz" 100;
+}
+p{
+    padding-top: 5px;
+    font-size: 16px;
+    font-family: 'Canva Sans','Noto Sans Variable','Noto Sans','-apple-system','BlinkMacSystemFont','Segoe UI',Helvetica,Arial,sans-serif;
+    font-variation-settings: "opsz" 100;
+    color: black;
 }
 
 #check {

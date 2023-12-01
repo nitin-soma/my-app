@@ -2,9 +2,9 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin-bottom: 70px;
+    margin-bottom: 135px;
     padding: 0;
-    min-height: 75vh;
+    min-height: 70vh;
     display: flex;
     flex-direction: column;
 }

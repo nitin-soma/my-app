@@ -5,16 +5,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow: auto;
+  overflow: hidden;
 }
 
 code {
   font-family: 'Canva Sans','Noto Sans Variable','Noto Sans','-apple-system','BlinkMacSystemFont','Segoe UI',Helvetica,Arial,sans-serif;
 }
 
-#root{
-  background-color: #C197D2;
-  background-image: url(https://static-cse.canva.com/_next/static/assets/wave_w2881xh801_d872655b74d866e818c4b252dda65d3fe6a169dac9e5dc5834236c423c1012b0.png);
-  background-repeat: no-repeat;
-  background-position: bottom
-}

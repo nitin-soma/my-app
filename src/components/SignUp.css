@@ -1,6 +1,6 @@
 .sign-up-page{
     text-align: center;
-    margin: 16%;
+    margin: 16.5%;
 }
 
 .sign-up-options{
@@ -39,6 +39,7 @@ strong {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-bottom: 180px;
 }
 
 
