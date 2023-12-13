@@ -27,32 +27,7 @@ const Announcements = () => {
           <a href="/">Profile</a>
         </nav>
         <div className="postMessage"></div>
-        <div className="messages">
-          <div className="message-container" onClick={toggleFullMessage}>
-            <div className="message-info">
-              <h2>Placement Cell</h2>
-              <time>12/1/2023, 9:34</time>
-            </div>
-            <p>Company Name</p>
-            <div className="full-message">
-              <p>Message</p>
-              <h4>PC</h4>
-              <h5>CBIT</h5>
-            </div>
-          </div>
-          <div className="message-container" onClick={toggleFullMessage}>
-            <div className="message-info">
-              <h2>Placement Cell</h2>
-              <time>12/1/2023, 9:34</time>
-            </div>
-            <p>Company Name</p>
-            <div className="full-message">
-              <p>Message</p>
-              <h4>PC</h4>
-              <h5>CBIT</h5>
-            </div>
-          </div>
-        </div>
+        <div className="messages"></div>
       </div>
     </>
   );

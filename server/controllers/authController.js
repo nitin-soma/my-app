@@ -3,6 +3,7 @@ const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
 const JWT_SECRET = process.env.JWT_SECRET;
 const User = require("../models/User");
+const Post = require("../models/Post");
 
 const register = async (req, res) => {
   try {
@@ -44,9 +45,11 @@ const login = async (req, res) => {
     foundUser.token = token;
     const result = await foundUser.save();
     res.cookie("jwt", token, {
+      domain: "localhost:3000",
       httpOnly: true,
       sameSite: "None",
       maxAge: 24 * 60 * 60 * 1000,
+      secure: true,
     });
     res.json({ roles, token });
   } catch (error) {
@@ -55,4 +58,31 @@ const login = async (req, res) => {
   }
 };
 
-module.exports = { register, login };
+const posts = async (req, res) => {
+  try {
+    const posts = await Post.find({});
+    res.json(posts);
+  } catch (error) {
+    res.status(500).json({ message: "Internal Server Error" });
+  }
+};
+
+const updates = async (req, res) => {
+  const { user, content } = req.body;
+  console.log(user, content);
+  const foundUser = await User.findOne({ email: user }).exec();
+  const userId = foundUser._id;
+  console.log(userId);
+
+  try {
+    const newPost = new Post({ user: userId, content });
+    await Post.insertMany([newPost]);
+    await newPost.save();
+
+    res.json({ message: "Post created successfully" });
+  } catch (error) {
+    res.status(500).json({ message: "Internal Server Error" });
+  }
+};
+
+module.exports = { register, login, posts, updates };

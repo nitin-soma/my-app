@@ -1,9 +1,9 @@
-import { createContext, useState, useEffect } from "react";
+import { createContext, useState, useEffect, useContext } from "react";
 
 // Initialize the context with an initial value for auth
-const AuthContext = createContext({ auth: {}, setAuth: () => {} });
+export const AuthContext = createContext();
 
-export const AuthProvider = ({ children }) => {
+const AuthProvider = (props) => {
   const [auth, setAuth] = useState({});
 
   useEffect(() => {
@@ -14,9 +14,17 @@ export const AuthProvider = ({ children }) => {
   // Provide the auth and setAuth values in the context
   return (
     <AuthContext.Provider value={{ auth, setAuth }}>
-      {children}
+      {props.children}
     </AuthContext.Provider>
   );
 };
 
-export default AuthContext;
+export const useAuth = () => {
+  const context = useContext(AuthContext);
+  if (!context) {
+    throw new Error("useAuth must be used within an AuthProvider");
+  }
+  return context;
+};
+
+export default AuthProvider;

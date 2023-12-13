@@ -1,6 +1,6 @@
 .login-form {
-    background-color: #343a40;
-    border: solid #79717A;
+    background-color: black;
+    border: solid black;
     padding-top: 30px;
     padding-left: 30px;
     padding-right: 30px;
@@ -9,6 +9,14 @@
     border-radius: 10px;
 }
 
+.form-control-sm{
+    background-color: #a9a9a9;
+    color: black;
+}
+
+label{
+    color: white;
+}
 
 .link-to-signup{
     display: flex;
@@ -33,9 +41,9 @@ p{
 }
 
 #check {
-    background-color: #4CAF50;
+    background-color: #d6d6d6;
     border: none;
-    color: white;
+    color: black;
     padding: 10px 20px;
     text-align: center;
     text-decoration: none;
@@ -47,5 +55,5 @@ p{
 }
 
 #check:hover {
-    background-color: #004F4D;
+    background-color: #a9a9a9;
 }

@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useState } from "react";
-import { Link, useNavigate, useLocation } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import Footer from "./Footer";
-import useAuth from "../hooks/useAuth";
+import { useAuth } from "../context/AuthProvider";
 import Navbar from "./Navbar";
 import axios from "../api/axios";
 import "./LogIn.css";
@@ -14,8 +14,8 @@ const LogIn = () => {
 
   const navigate = useNavigate();
   const location = useLocation();
-  const from = location.state?.from?.pathname || "/";
-  const postform = "/postform";
+  const from = location.state?.from?.pathname || "/home";
+  const postform = "/notifications";
   const userRef = useRef();
   const errRef = useRef();
 
