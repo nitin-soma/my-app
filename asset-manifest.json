@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/placement-drive/static/css/main.afe4435c.css",
+    "main.js": "/placement-drive/static/js/main.9d12b166.js",
+    "static/js/787.d4aba7ab.chunk.js": "/placement-drive/static/js/787.d4aba7ab.chunk.js",
+    "static/media/pexels-pixabay-257092.jpg": "/placement-drive/static/media/pexels-pixabay-257092.68d3d4770fd8796137f6.jpg",
+    "index.html": "/placement-drive/index.html",
+    "main.afe4435c.css.map": "/placement-drive/static/css/main.afe4435c.css.map",
+    "main.9d12b166.js.map": "/placement-drive/static/js/main.9d12b166.js.map",
+    "787.d4aba7ab.chunk.js.map": "/placement-drive/static/js/787.d4aba7ab.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.afe4435c.css",
+    "static/js/main.9d12b166.js"
+  ]
+}
