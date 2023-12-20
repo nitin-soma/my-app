@@ -12,13 +12,13 @@ const Footer = () => {
             </a>
           </div>
           <div>
-            <a href="/contactus" role="button">
-              Contact us
+            <a href="https://www.cbit.ac.in/" role="button">
+              CBIT Website
             </a>
           </div>
           <div>
-            <a href="https://www.cbit.ac.in/" role="button">
-              CBIT Website
+            <a href="/contactus" role="button">
+              Contact us
             </a>
           </div>
         </div>

@@ -12,8 +12,6 @@ const PostForm = ({ onPost }) => {
     e.preventDefault();
 
     try {
-      console.log("in postForm");
-
       // Include the access token in the headers
       const response = await axios.post(
         POST_URL,

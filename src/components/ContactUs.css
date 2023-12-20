@@ -10,8 +10,8 @@ body, h1, h2, h3, p, img {
 
 body {
     font-family: Arial, sans-serif;
-    background: url('../../public/pexels-jayant-kulkarni-910213.jpg') no-repeat center center fixed;
-    background-size: cover;
+    /* background: url('../../public/pexels-jayant-kulkarni-910213.jpg') no-repeat center center fixed;
+    background-size: cover; */
 }
 
 #anchors {
@@ -32,7 +32,7 @@ nav a {
     color: black;
     border-radius: 10px;
     text-align: left;
-    background: url('../../public/pexels-pixabay-257092.jpg') no-repeat center center fixed;
+    background: url('../../public/pexels-pixabay-257092.jpg') no-repeat center center fixed; 
     background-size: cover;
 }
 

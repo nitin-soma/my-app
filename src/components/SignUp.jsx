@@ -2,38 +2,41 @@ import React from "react";
 import Navbar from "./Navbar";
 import "./Navbar.css";
 import Footer from "./Footer";
-import "./Footer.css"
+import "./Footer.css";
+import { Link } from "react-router-dom";
 
 const SignUp = () => {
   return (
     <>
       <Navbar />
       <div className="sign-up-page">
-        <strong>Sign up as</strong>
+        <div>
+          <strong className="sign-up-heading">Sign up as</strong>
+        </div>
         <div className="sign-up-options">
-          <a
+          <Link
             className="btn btn-primary btn-with-space"
-            href="/student"
+            to="/student"
             role="button"
           >
             Student
-          </a>
-          <a
+          </Link>
+          <Link
             className="btn btn-primary btn-with-space"
-            href="/admin"
+            to="/admin"
             role="button"
           >
             Admin
-          </a>
+          </Link>
         </div>
 
         <div>
           <p>
-            Already signed up? <a href="/login">Log in</a>
+            Already signed up? <Link to="/login">Log in</Link>
           </p>
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </>
   );
 };

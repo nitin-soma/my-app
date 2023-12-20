@@ -1,41 +1,39 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Navbar.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const Navbar = () => {
   return (
     <>
-      <header className="navbar-expand-lg bd-navbar sticky-top">
+      <header className="navbar-expand-lg bd-navbar sticky-top z-5">
         <div className="navbar">
           <div className="nav-container">
             <div className="nav-brand">
-              <a href="/">
+              <Link to="/">
                 <img
                   className="cbit-logo"
                   src="CBIT-LOGO.png"
                   alt="CBIT LOGO"
                 />
-              </a>
+              </Link>
             </div>
             <div>
               <ul className="nav-menu d-flex">
                 <li className="nav-item">
-                  <a href="/dashboard">Dashboard</a>
+                  <Link to="/dashboard">Dashboard</Link>
                 </li>
                 <li className="nav-item">
-                  <a href="/announcements">Announcements</a>
+                  <Link to="/announcements">Announcements</Link>
                 </li>
                 <li className="nav-item">
-                  <a href="/contactus">Contact Us</a>
+                  <Link to="/signup">Sign up</Link>
                 </li>
                 <li className="nav-item">
-                  <a href="/signup">Sign up</a>
+                  <Link to="/login">Log in</Link>
                 </li>
                 <li className="nav-item">
-                  <a href="/login">Log in</a>
-                </li>
-                <li className="nav-item">
-                  <a href="/">Profile</a>
+                  <Link to="/">Profile</Link>
                 </li>
               </ul>
             </div>

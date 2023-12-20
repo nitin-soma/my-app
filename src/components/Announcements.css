@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
-    background: url('../../public/photo-1482440308425-276ad0f28b19.jpg') no-repeat bottom fixed;
-    background-size: cover;
+    /* background: url('../../public/photo-1482440308425-276ad0f28b19.jpg') no-repeat bottom fixed;
+    background-size: cover; */
     margin: 0;
     padding: 0;
 }

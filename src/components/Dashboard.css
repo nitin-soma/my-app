@@ -1,11 +1,22 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: url('../../public/simple-backgrounds-wide-header.jpg') no-repeat center center fixed;
-    background-size: cover;
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+   }
+   
+.grid-item {
+padding: 20px;
+background-color: #ddd;
+border: 1px solid #ccc;
+text-align: center;
 }
-
+   
+   /* Responsive design */
+@media (max-width: 600px) {
+.grid-container {
+    grid-template-columns: repeat(2, 1fr);
+}
+}
 heading{
     display: flex;
     flex-direction: column;

@@ -1,6 +1,6 @@
 .sign-up-page{
-    text-align: center;
-    margin: 16.5%;
+    margin-top: 13%;
+    margin-bottom: 16%;
 }
 
 .sign-up-options{
@@ -15,12 +15,16 @@ p{
     color: white;
 }
 
-div a{
+div Link{
     margin: 10px;
 }
 
 .btn-with-space {
     margin-right: 10px;
+}
+
+.sign-up-heading{
+    color: white;
 }
 
 strong {
@@ -31,7 +35,7 @@ strong {
 }
 
 .student-strong{
-    color: #211522;
+    color: white;
     font-size: 40px;
 }
 
@@ -44,7 +48,7 @@ strong {
 
 
 .formfield {
-    background-color: #f4f4f4;
+    background-color: #7289da;
     padding-top: 40px;
     padding-bottom: 40px;
     padding-left: 55px;

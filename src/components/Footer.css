@@ -1,16 +1,19 @@
 .footer-s {
-    background: linear-gradient(to bottom, white, #d6d6d6, #a9a9a9, black);
     margin-top: -60px;
     padding: 10px;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     list-style-type: none;
 }
 
 a{
     color: #211522;
+}
+
+.footer-s a:hover{
+    text-decoration: underline;
+    color: #00B9E8;
 }
 
 .footer-section a:hover {

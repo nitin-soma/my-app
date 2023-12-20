@@ -24,11 +24,11 @@ const JobUpdates = () => {
 
   return (
     <div>
-      <ul>
+      {/* <ul>
         {posts.map((post) => (
           <li key={post.id}>{post.content}</li>
         ))}
-      </ul>
+      </ul> */}
 
       <PostForm onPost={handlePost} />
     </div>

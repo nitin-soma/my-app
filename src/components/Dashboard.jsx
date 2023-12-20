@@ -1,27 +1,15 @@
 import React from "react";
+import Navbar from "./Navbar";
 import "./Dashboard.css";
+import "./Navbar.css";
 
 const Dashboard = () => {
   return (
     <>
-      <header>
-        <div className="heading">
-          <div>
-            <strong>Student Placement Dashboard</strong>
-          </div>
-          <div>
-            <img id="cbit_logo" src="CBIT-LOGO.png" alt="cbit_logo" />
-          </div>
-        </div>
-      </header>
-      <nav>
-        <a href="/">Profile</a>
-        {/* <a href="/">Status</a> */}
-        <a href="/contactus">Contact us</a>
-      </nav>
-      <div>Dashboard</div>
-      <main>
-        <section id="Placement Statistics">
+      <Navbar />
+      <strong>Dashboard</strong>
+      <main className="grid-container">
+        <section className="grid-item">
           <a href="Companies.pdf">
             <h3>Placement Statistics</h3>
             <img
@@ -31,7 +19,7 @@ const Dashboard = () => {
           </a>
         </section>
 
-        <section id="Announcements">
+        <section className="grid-item">
           <a href="/announcements">
             <h3>Announcements</h3>
             <img
@@ -41,7 +29,7 @@ const Dashboard = () => {
           </a>
         </section>
 
-        <section id="Feedback and Reviews">
+        <section className="grid-item">
           <a href="/statistics">
             <h3>Feedback and Reviews</h3>
             <img

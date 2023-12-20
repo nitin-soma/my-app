@@ -43,7 +43,7 @@ const login = async (req, res) => {
     );
 
     foundUser.token = token;
-    const result = await foundUser.save();
+    await foundUser.save();
     res.cookie("jwt", token, {
       domain: "localhost:3000",
       httpOnly: true,
@@ -69,10 +69,13 @@ const posts = async (req, res) => {
 
 const updates = async (req, res) => {
   const { user, content } = req.body;
-  console.log(user, content);
   const foundUser = await User.findOne({ email: user }).exec();
   const userId = foundUser._id;
-  console.log(userId);
+  const userRole = foundUser.role;
+
+  if (userRole !== "admin") {
+    return res.status(401).json({ message: "Unauthorized access" });
+  }
 
   try {
     const newPost = new Post({ user: userId, content });
@@ -85,4 +88,27 @@ const updates = async (req, res) => {
   }
 };
 
-module.exports = { register, login, posts, updates };
+const users = async (req, res) => {
+  try {
+    const userId = req.params._id;
+    const user = await User.findById(userId);
+
+    if (!user) {
+      return res.status(404).json({ message: "User not found" });
+    }
+
+    // Customize the response based on your needs, for example, sending only necessary user data
+    const userData = {
+      email: user.email,
+      role: user.role,
+      // Add other fields you want to include
+    };
+
+    res.json(userData);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: "Internal Server Error" });
+  }
+};
+
+module.exports = { register, login, posts, updates, users };

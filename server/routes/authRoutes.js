@@ -9,5 +9,6 @@ router.post("/student", authController.register);
 router.post("/login", authController.login);
 router.get("/posts", authController.posts);
 router.post("/updates", authController.updates);
+router.get("/users/:_id", authController.users);
 
 module.exports = router;

@@ -7,9 +7,7 @@ import SignUp from "./components/SignUp";
 import StudentSignUp from "./components/StudentSignUp";
 import AdminSignUp from "./components/AdminSignUp";
 import LogIn from "./components/LogIn";
-import AdminHome from "./components/AdminHome";
 import Announcements from "./components/Announcements";
-import RequireAuth from "./components/RequireAuth";
 import ContactUs from "./components/Contactus";
 import PostForm from "./components/PostForm";
 import LoginHome from "./components/LoginHome";
@@ -38,9 +36,6 @@ function App() {
             <Route path="/announcements" element={<Announcements />}></Route>
             <Route path="/contactus" element={<ContactUs />} />
             <Route path="/login" element={<LogIn />}></Route>
-            <Route element={<RequireAuth allowedRoles={["admin"]} />}>
-              <Route path="/adminHome" element={<AdminHome />}></Route>
-            </Route>
             <Route path="/dashboard" element={<Dashboard />}></Route>
             <Route path="/postform" element={<PostForm />} />
             <Route path="/home" element={<LoginHome />} />
